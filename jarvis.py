@@ -11,7 +11,7 @@ import smtplib
 engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
 # print(voices[].id)
-engine.setProperty('voice',voices[1].id)
+engine.setProperty('voice',voices[0].id)
 
 def speak(audio):
     engine.say(audio)
@@ -90,8 +90,8 @@ if __name__ == "__main__":
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
-            print(f"Sir, the time is {strTime}")
-            speak(f"Sir, the time is {strTime}")
+            print(f"The time is {strTime}")
+            speak(f"The time is {strTime}")
 
         elif 'open code' in query:
             speak("Opening code")
@@ -112,8 +112,8 @@ if __name__ == "__main__":
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry sir. I am not able to send this email")
+                speak("Sorry. I am not able to send this email")
         
         elif 'exit' in query:
-            speak("Thank you sir, Have a good day..")
+            speak("Thank you, Have a good day..")
             exit()

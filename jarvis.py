@@ -82,8 +82,8 @@ if __name__ == "__main__":
             webbrowser.open("stackoverflow.com")
 
         elif 'play music' in query:
-            music_dir = 'C:\\Users\\Lenovo\\Music'
-            songs = os.listdir(music_dir)
+            music_dir = 'C:\\Users\\Lenovo\\Music'  #You have to provide the path of folder where your music is stored. 
+ you            songs = os.listdir(music_dir)
             # print(songs)    
             speak("Playing music now")
             os.startfile(os.path.join(music_dir, songs[random.randint(0,len(music_dir))]))
@@ -95,12 +95,12 @@ if __name__ == "__main__":
 
         elif 'open code' in query:
             speak("Opening code")
-            codePath = "C:\\Users\\Lenovo\\AppData\\Local\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\Lenovo\\AppData\\Local\Programs\\Microsoft VS Code\\Code.exe"    #You have to provide the path of vs code in your computer.
             os.startfile(codePath)
 
         elif 'open chrome' in query:
             speak("Sure opening chrome now")
-            codePath = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+            codePath = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'     #You have to provide the path of google chrome code in your computer.
             os.startfile(codePath)
 
         elif 'email to rishi' in query:
@@ -112,10 +112,8 @@ if __name__ == "__main__":
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry baby. I am not able to send this email")
-        elif "love you" in query:
-            speak("I love you too..")
-
+                speak("Sorry sir. I am not able to send this email")
+        
         elif 'exit' in query:
             speak("Thank you sir, Have a good day..")
             exit()
